@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Guessing Game</title>
+</head>
+<body>
+<h1 align="center"> Guess The Word </h1>
+<h2 align="center" th:text="${word}"> wordToDisplay </h2>
+
+<hr/>
+
+
+<form action="game_home" method="GET">
+    <div align="center">
+
+        <label> Guess the word: </label>
+        <input type="text" name="captured_Char">
+        <input type="submit" value="try">
+
+    </div>
+</form>
+
+</body>
+</html>
