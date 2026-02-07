@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="shapes">
+    <span class="shape circle"></span>
+    <span class="shape square"></span>
+    <span class="shape circle"></span>
+    <span class="shape square"></span>
+    <span class="shape circle"></span>
+</div>
+
+<div class="container">
+
+    <div class="card input-card" id="inputCard">
+        <h2>Challenge Generator</h2>
+
+        <input
+                type="text"
+                id="challengeId"
+                placeholder="Enter Challenge ID"
+        >
+
+        <button onclick="fetchChallenge()">Get Challenge</button>
+    </div>
+
+    <div class="card loading-card hidden" id="loadingCard">
+        <div class="loader"></div>
+        <p>Fetching challenge...</p>
+    </div>
+
+    <div class="card challenge-card hidden" id="challengeCard">
+        <h2>Challenge</h2>
+
+
+        <div class="difficulty-wrapper">
+            <div id="difficultyBar"></div>
+        </div>
+
+
+        <p id="specialMessage" class="special hidden"></p>
+
+        <pre id="challengeText"></pre>
+
+        <button onclick="reset()">Try Another</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
